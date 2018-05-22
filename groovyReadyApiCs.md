@@ -1,6 +1,6 @@
 ### Groovy Script Cheat Sheet
 
-Compare scripts using response
+## Compare scripts using response
 ```
 import net.sf.json.groovy.JsonSlurper
 
