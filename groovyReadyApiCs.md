@@ -61,7 +61,7 @@ try {
 }
 ```
 
-Set Header to a Test case property
+Set Header to a Test case property from script assertion
 ```
 assert messageExchange.responseHeaders["ETag"] != null
 if(messageExchange.responseHeaders["ETag"] != null){
@@ -69,6 +69,14 @@ if(messageExchange.responseHeaders["ETag"] != null){
 }
 ```
 
+Retrieve http status code from response header from groovy script
+```
+def httpResponseHeaders = context.testCase.testSteps["TestCaseName"].testRequest.response.responseHeaders
+def httpStatus = httpResponseHeaders["#status#"]
+def httpStatusCode = (httpStatus =~ "[1-5]\\d\\d")[0]
+
+log.info httpStatusCode
+```
 
 
 Setting up Data
